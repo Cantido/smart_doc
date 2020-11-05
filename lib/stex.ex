@@ -4,15 +4,32 @@ defmodule Stex do
   """
 
   @doc """
-  Hello world.
+  Checks English text for simplicity.
+
+  Returns a list of rule violations.
 
   ## Examples
 
-      iex> Stex.hello()
-      :world
+      iex> Stex.validate("This is a simple sentence.")
+      []
 
   """
-  def hello do
-    :world
+  def validate(text) do
+    sentences =
+      text
+      |> String.split(~r/\.[\s\r\n]*/)
+      |> Enum.reject(&String.length(&1) == 0)
+      |> Enum.map(&String.split/1)
+      |> Enum.flat_map(fn words ->
+        if Enum.count(words) > 25 do
+          [%{
+            rule: :write_short_sentences,
+            context: Enum.slice(words, 21..27) |> Enum.join(" ")
+          }]
+        else
+          []
+        end
+      end)
+
   end
 end
