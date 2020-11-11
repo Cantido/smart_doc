@@ -1,7 +1,7 @@
 defmodule Stex.Rules.ShortParagraphs do
   @behaviour Stex.Rule
 
-  def evaluate(text) do
+  def evaluate(text, _opts) do
     paragraphs =
       text
       |> String.split(~r/[\r\n]{2,}/, trim: true)

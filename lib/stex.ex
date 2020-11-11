@@ -14,13 +14,14 @@ defmodule Stex do
       []
 
   """
-  def validate(text) do
+  def validate(text, opts \\ []) do
     [
       Stex.Rules.ShortParagraphs,
-      Stex.Rules.ShortSentences
+      Stex.Rules.ShortSentences,
+      Stex.Rules.CommonWords
     ]
     |> Enum.map(fn mod ->
-      Task.async(mod, :evaluate, [text])
+      Task.async(mod, :evaluate, [text, opts])
     end)
     |> Task.await_many()
     |> List.flatten()

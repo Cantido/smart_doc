@@ -1,0 +1,13 @@
+architecture
+elixir
+client-side
+controller
+database
+dependency
+domain
+directory
+download
+phoenix
+server-side
+template
+web
