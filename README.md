@@ -13,7 +13,7 @@ by adding `smart_doc` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:smart_doc, "~> 0.1.0"}
+    {:smart_doc, "~> 0.1.0", only: :dev, runtime: false}
   ]
 end
 ```
