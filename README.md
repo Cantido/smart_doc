@@ -1,6 +1,9 @@
 # Stex
 
-A Simplified Technical English (STE) validator.
+A text validator to make sure your docs are in simple technical English.
+
+This library does not implement The AeroSpace and Defense Industries' ASD-STE100,
+but it is inspired by it, and tries to apply its rules to software documentation.
 
 ## Installation
 
