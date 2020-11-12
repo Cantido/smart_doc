@@ -27,7 +27,7 @@ be found at [https://hexdocs.pm/smart_doc](https://hexdocs.pm/smart_doc).
 Use the `mix` task:
 
 ```sh
-mix smartdoc myfile.md
+mix smart_doc myfile.md
 ```
 
 ## Maintainer
