@@ -1,4 +1,4 @@
-defmodule Stex.Rules.ShortSentences do
+defmodule SmartDoc.Rules.ShortSentences do
   def evaluate(text, _opts) do
     text
     |> String.split(~r/\.[\s\r\n]+/, trim: true)

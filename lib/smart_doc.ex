@@ -1,6 +1,6 @@
-defmodule Stex do
+defmodule SmartDoc do
   @moduledoc """
-  Documentation for `Stex`.
+  Documentation for `SmartDoc`.
   """
 
   @doc """
@@ -10,15 +10,15 @@ defmodule Stex do
 
   ## Examples
 
-      iex> Stex.validate("This is a simple sentence.")
+      iex> SmartDoc.validate("This is a simple sentence.")
       []
 
   """
   def validate(text, opts \\ []) do
     [
-      Stex.Rules.ShortParagraphs,
-      Stex.Rules.ShortSentences,
-      Stex.Rules.CommonWords
+      SmartDoc.Rules.ShortParagraphs,
+      SmartDoc.Rules.ShortSentences,
+      SmartDoc.Rules.CommonWords
     ]
     |> Enum.map(fn mod ->
       Task.async(mod, :evaluate, [text, opts])

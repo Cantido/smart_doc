@@ -1,5 +1,5 @@
-defmodule Stex.Rules.CommonWords do
-  @behaviour Stex.Rule
+defmodule SmartDoc.Rules.CommonWords do
+  @behaviour SmartDoc.Rule
 
   @external_resource common_words_path = Path.join(__DIR__, ["wordlists/common_words.txt"])
   @external_resource technical_words_path = Path.join(__DIR__, ["wordlists/technical_words.txt"])

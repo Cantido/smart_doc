@@ -1,5 +1,5 @@
-defmodule Stex.Rules.ShortParagraphs do
-  @behaviour Stex.Rule
+defmodule SmartDoc.Rules.ShortParagraphs do
+  @behaviour SmartDoc.Rule
 
   def evaluate(text, _opts) do
     paragraphs =

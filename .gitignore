@@ -20,7 +20,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-stex-*.tar
+smart_doc-*.tar
 
 
 # Temporary files for e.g. tests

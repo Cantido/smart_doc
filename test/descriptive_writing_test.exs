@@ -1,4 +1,4 @@
-defmodule Stex.DescriptiveWritingTest do
+defmodule smart_doc.DescriptiveWritingTest do
   use ExUnit.Case
 
   @ignored_words [
@@ -19,7 +19,7 @@ defmodule Stex.DescriptiveWritingTest do
 
   describe "sentence maximum length" do
     test "flags sentences with more than 25 words in them" do
-      [error] = Stex.validate("""
+      [error] = smart_doc.validate("""
       Using the "`topic:subtopic`" approach pairs nicely with the
       `Phoenix.Socket.channel/3` allowing you to match on all topics starting
       with a given prefix by using a splat (the `*` character) as the last
@@ -36,7 +36,7 @@ defmodule Stex.DescriptiveWritingTest do
 
   describe "paragraph maximum length" do
     test "passes multiple paragraphs each with six or fewer sentences" do
-      errors = Stex.validate("""
+      errors = smart_doc.validate("""
       Phoenix is a web development framework written in Elixir which implements
       the server-side Model View Controller (MVC) pattern. Many of its
       components and concepts will seem familiar to those of us with experience
@@ -53,7 +53,7 @@ defmodule Stex.DescriptiveWritingTest do
     end
 
     test "flags a paragraph with more than six sentences" do
-      [error] = Stex.validate("""
+      [error] = smart_doc.validate("""
       - `deps` - a directory with all of our Mix dependencies. You can find all
       dependencies listed in the `mix.exs` file, inside the `def deps do` function
       definition. This directory must not be checked into version control and

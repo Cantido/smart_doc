@@ -1,33 +1,33 @@
-# Stex
+# smart_doc
 
 A text validator to make sure your docs are in simple technical English.
 
-This library does not implement The AeroSpace and Defense Industries' ASD-STE100,
+This library does not implement The AeroSpace and Defense Industries' "Simplified Technical English,"
 but it is inspired by it, and tries to apply its philosophy to software documentation.
 
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `stex` to your list of dependencies in `mix.exs`:
+by adding `smart_doc` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:stex, "~> 0.1.0"}
+    {:smart_doc, "~> 0.1.0"}
   ]
 end
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/stex](https://hexdocs.pm/stex).
+be found at [https://hexdocs.pm/smart_doc](https://hexdocs.pm/smart_doc).
 
 ## Usage
 
 Use the `mix` task:
 
 ```sh
-mix stex myfile.md
+mix smartdoc myfile.md
 ```
 
 ## Maintainer
@@ -39,7 +39,7 @@ You can get in touch with her on [Keybase.io](https://keybase.io/cantido).
 
 Questions and pull requests are more than welcome.
 I follow Elixir's tenet of bad documentation being a bug,
-so if anything is unclear, please [file an issue](https://github.com/Cantido/stex/issues/new)!
+so if anything is unclear, please [file an issue](https://github.com/Cantido/smart_doc/issues/new)!
 Ideally, my answer to your question will be in an update to the docs.
 
 ## License

@@ -1,9 +1,9 @@
-defmodule Stex.MixProject do
+defmodule SmartDoc.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :stex,
+      app: :smart_doc,
       description: "Helps you write simple technical documentation.",
       package: package(),
       docs: docs(),
@@ -18,13 +18,13 @@ defmodule Stex.MixProject do
     [
       maintainers: ["Rosa Richter"],
       licenses: ["MIT"],
-      links: %{"Github" => "https://github.com/Cantido/stex"}
+      links: %{"Github" => "https://github.com/Cantido/smart_doc"}
     ]
   end
 
   def docs do
     [
-      source_url: "https://github.com/Cantido/stex"
+      source_url: "https://github.com/Cantido/smart_doc"
     ]
   end
 

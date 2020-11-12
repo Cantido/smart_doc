@@ -1,10 +1,10 @@
-defmodule Mix.Tasks.Stex do
+defmodule Mix.Tasks.SmartDoc do
   use Mix.Task
 
   def run([filename]) do
     contents = File.read!(filename)
 
-    results = Stex.validate(contents)
+    results = SmartDoc.validate(contents)
 
     Enum.map(results, fn result ->
       """
